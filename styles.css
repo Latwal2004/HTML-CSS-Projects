@@ -7,6 +7,7 @@
     font-family: "Poppins", sans-serif;
 
 }
+
 body{
     height: 100vh;
     display: flex;
@@ -23,7 +24,19 @@ body{
     background: #fff;
     border-radius: 25px;
     padding: 25px;
-    box-shadow: 0 5px 10px rgb(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgb(0,0,0,1);
+    position: relative;
+}
+
+.profile-card::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #4070f4;
 }
 
 .image{
@@ -49,7 +62,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: #333;
 }
 
 .text-data .name{
@@ -60,4 +73,81 @@ body{
 .text-data .job{
     font-size: 15px;
     font-weight: 400;
+}
+
+.profile-card .media-button{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-button .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: #4070f4;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.media-button .link:hover{
+    transform: scale(1.5);
+}
+
+/* profile_card Buttons */
+.profile-card .buttons{
+display: flex;
+align-items: center;
+margin-top: 25px;
+}
+
+.buttons .button{
+    border: none;
+    font-weight: 400;
+    border-radius: 24px;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.buttons .button:hover{
+    transform: translateY(-8px);
+    background-color: #0e4bf1;
+}
+
+/* profile card analytics */
+.profile-card .analytics{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.analytics .data{
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+}
+.data i{
+    font-size: 18px;
+    margin-right:6px;
+    transition: all 0.4s ease;
+}
+.data i:hover{
+    cursor: pointer;
+    color: red;
+    transform: scale(2);
+}
+.data:last-child{
+    border-right: none;
 }
